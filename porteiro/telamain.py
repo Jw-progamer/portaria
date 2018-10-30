@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import QWidget
 from uis.uimain import Ui_Form
-from dialog import ConfigDialog
+from portaria import Portaria
+
 
 class TelaMain(QWidget):
     def __init__(self):
@@ -8,8 +9,16 @@ class TelaMain(QWidget):
         self.ui = Ui_Form()
         self.ui.setupUi(self)
 
-        config = ConfigDialog()
-        config.show()
-        config.exec_()
+        self.sock = None
+        self.ui.configBtn.clicked.connect(self.instanceSocket)
+        self.ui.openBtn.clicked.connect(self.openDoor)
 
+    def instanceSocket(self):
+        ip = self.ui.iptxt.text()
+        porta = int(self.ui.portatxt.text())
+        print(ip, porta)
+        self.sock = Portaria(ip, porta)
+        self.ui.configBtn.enabled = False
 
+    def openDoor(self):
+        self.sock.enviarSinal()
