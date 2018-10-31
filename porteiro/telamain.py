@@ -17,6 +17,8 @@ class TelaMain(QWidget):
         ip = self.ui.iptxt.text()
         porta = int(self.ui.portatxt.text())
         print(ip, porta)
+        self.ui.ip_trava.setText(ip)
+        self.ui.porta_trava.setText(str(porta))
         self.sock = Portaria(ip, porta)
         self.ui.configBtn.enabled = False
 
