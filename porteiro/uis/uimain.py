@@ -69,6 +69,6 @@ class Ui_Form(object):
         self.label_3.setText(_translate("Form", "Porta de configuração da trava:"))
         self.label_4.setText(_translate("Form", "Endereço de rede:"))
         self.label_5.setText(_translate("Form", "Porta de configuração:"))
-        self.configBtn.setText(_translate("Form", "Cinfigurar Endereço"))
+        self.configBtn.setText(_translate("Form", "Configurar Endereço"))
         self.openBtn.setText(_translate("Form", "Abrir portaria"))
 
