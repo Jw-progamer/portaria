@@ -1,13 +1,13 @@
 import socket
 
-class receberSinal:
+class ReceberSinal:
     def __init__(self, porta):
         self.host = "localhost"
         self.porta = porta
         conect = (self.host, self.porta)
-
         self.server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
+        self.server.bind(conect)
+        self.server.listen(1)
     def start(self):
         while True:
             con, cliente = self.server.accept()
