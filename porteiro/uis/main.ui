@@ -6,14 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>487</width>
-    <height>300</height>
+    <width>791</width>
+    <height>576</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Portaria</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Câmera da portaria:</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QWebView" name="webViewCamera">
+       <property name="url">
+        <url>
+         <string>about:blank</string>
+        </url>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item>
     <widget class="QLabel" name="label">
      <property name="font">
@@ -83,7 +103,7 @@
    <item>
     <widget class="QPushButton" name="configBtn">
      <property name="text">
-      <string>Cinfigurar Endereço</string>
+      <string>Configurar Endereço</string>
      </property>
     </widget>
    </item>
@@ -96,6 +116,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

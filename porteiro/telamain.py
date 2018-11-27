@@ -1,4 +1,5 @@
 from PyQt5.QtWidgets import QWidget
+from PyQt5.QtCore import QUrl
 from uis.uimain import Ui_Form
 from portaria import Portaria
 
@@ -8,6 +9,8 @@ class TelaMain(QWidget):
         super().__init__()
         self.ui = Ui_Form()
         self.ui.setupUi(self)
+
+        self.ui.webViewCamera.load(QUrl('/uis/espera.html'))
 
         self.sock = None
         self.ui.configBtn.clicked.connect(self.instanceSocket)

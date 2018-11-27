@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'porteiro/uis/main.ui'
+# Form implementation generated from reading ui file 'uis/main.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -11,9 +11,19 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Form(object):
     def setupUi(self, Form):
         Form.setObjectName("Form")
-        Form.resize(487, 300)
+        Form.resize(791, 576)
         self.verticalLayout = QtWidgets.QVBoxLayout(Form)
         self.verticalLayout.setObjectName("verticalLayout")
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.label_6 = QtWidgets.QLabel(Form)
+        self.label_6.setObjectName("label_6")
+        self.horizontalLayout.addWidget(self.label_6)
+        self.webViewCamera = QtWebEngineWidgets.QWebEngineView(Form)
+        self.webViewCamera.setUrl(QtCore.QUrl("about:blank"))
+        self.webViewCamera.setObjectName("webViewCamera")
+        self.horizontalLayout.addWidget(self.webViewCamera)
+        self.verticalLayout.addLayout(self.horizontalLayout)
         self.label = QtWidgets.QLabel(Form)
         font = QtGui.QFont()
         font.setPointSize(12)
@@ -64,6 +74,7 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         _translate = QtCore.QCoreApplication.translate
         Form.setWindowTitle(_translate("Form", "Portaria"))
+        self.label_6.setText(_translate("Form", "Câmera da portaria:"))
         self.label.setText(_translate("Form", "Sistema de Portaria eletrônica"))
         self.label_2.setText(_translate("Form", "Endereço de rede da trava:"))
         self.label_3.setText(_translate("Form", "Porta de configuração da trava:"))
@@ -72,3 +83,4 @@ class Ui_Form(object):
         self.configBtn.setText(_translate("Form", "Configurar Endereço"))
         self.openBtn.setText(_translate("Form", "Abrir portaria"))
 
+from PyQt5 import QtWebEngineWidgets
