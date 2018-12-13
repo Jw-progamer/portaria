@@ -15,4 +15,3 @@ class ReceberSinal:
             msg = con.recv(1024)
             print(str(msg,"utf-8"))
             con.close()
-            
